@@ -1,0 +1,159 @@
+.home {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg,
+            #dce1ec 0%,
+            #ffffff 50%,
+            #e4e9f3 100%);
+    position: relative;
+    padding: 2rem;
+}
+
+/* Thêm một overlay gradient nhẹ để tạo độ sâu */
+.home::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg,
+            rgba(220, 225, 236, 0.7) 0%,
+            rgba(255, 255, 255, 0.5) 100%);
+    pointer-events: none;
+}
+
+/* Đảm bảo content nằm trên overlay */
+.home-container {
+    text-align: left;
+    max-width: 1200px;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+    padding: 0 20px;
+}
+
+.home h1 {
+    font-size: 4rem;
+    font-weight: 700;
+    color: #45505b;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+    font-family: "Raleway", sans-serif;
+}
+
+.home p {
+    font-size: 1.75rem;
+    color: #666;
+    margin-bottom: 2rem;
+    line-height: 1.5;
+    font-family: "Be Vietnam Pro", sans-serif;
+}
+
+.highlight {
+    color: #0066ff;
+}
+
+.social-links {
+    display: flex;
+    gap: 1rem;
+}
+
+.social-link {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.8rem 1.5rem;
+    border-radius: 25px;
+    background: white;
+    color: #45505b;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-family: "Be Vietnam Pro", sans-serif;
+}
+
+.social-link svg {
+    font-size: 20px;
+}
+
+.social-link:hover {
+    color: #0066ff;
+    background-color: rgba(0, 102, 255, 0.1);
+    transform: translateY(-2px);
+}
+
+.typing-text {
+    color: #0066ff;
+    border-right: 2px solid #0066ff;
+    padding-right: 5px;
+    animation: blink .75s step-end infinite;
+}
+
+@keyframes blink {
+
+    from,
+    to {
+        border-color: transparent;
+    }
+
+    50% {
+        border-color: #0066ff;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .home h1 {
+        font-size: 3.5rem;
+    }
+
+    .home p {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .home {
+        padding: 6rem 1rem 2rem;
+        text-align: center;
+    }
+
+    .home h1 {
+        font-size: 2.8rem;
+    }
+
+    .home p {
+        font-size: 1.3rem;
+    }
+
+    .social-links {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .social-link {
+        padding: 0.7rem 1.2rem;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .home h1 {
+        font-size: 2.2rem;
+    }
+
+    .home p {
+        font-size: 1.1rem;
+    }
+
+    .social-links {
+        gap: 0.8rem;
+    }
+
+    .social-link {
+        padding: 0.6rem 1rem;
+        font-size: 0.85rem;
+    }
+}
