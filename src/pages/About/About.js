@@ -11,7 +11,7 @@ const About = () => {
                         My name is Nhat Tan, a third-year Information Technology student at the University of Information Technology, Ho Chi Minh City.
                         Passionate about technology.
                         I am constantly exploring new innovations in the field.
-                        I have achieved a GPA of 8.24/10 while gaining hands-on experience in collaborating with teams and managing complex projects.
+                        I have achieved a GPA of 8.26/10 while gaining hands-on experience in collaborating with teams and managing complex projects.
                     </p>
 
                     <div className="about-info">
