@@ -1,20 +1,26 @@
 import './Work.css';
-import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
+import { FaGithub } from 'react-icons/fa';
 import { BiCode, BiWorld, BiMobile } from 'react-icons/bi';
 
 const Work = () => {
     const projects = [
         {
+            title: 'GearHot',
+            description: 'An e-commerce platform for tech gadgets with customer shopping features and admin dashboard. Includes product catalog, shopping cart, order management, and multiple payment methods (COD/QR). Built with modern web technologies for optimal performance.',
+            technologies: ['ReactJS', 'NodeJS', 'MongoDB', 'Express', 'Shadcn/UI'],
+            github: 'https://github.com/Shiengg/GearHot.git',
+        },
+        {
+            title: 'GiaoHangChat',
+            description: 'An effective last-mile delivery solution that helps optimize delivery routes and manage delivery staff. Includes delivery status updates, route display, and order status tracking. The app helps streamline the delivery process and improve customer satisfaction.',
+            technologies: ['ReactJS', 'Node.js', 'MongoDB', 'Express', 'Tailwind CSS', 'Here Maps API'],
+            github: 'https://github.com/Shiengg/Last_mile_delivery.git',
+        },
+        {
             title: 'Hotel Management',
             description: 'A comprehensive hotel management system built with modern technologies. Features include room booking, guest management, and administrative dashboard. The system provides an intuitive interface for hotel staff to manage daily operations efficiently.',
             technologies: ['ReactJS', 'Node.js', 'MongoDB', 'Express', 'Bootstrap'],
             github: 'https://github.com/Shiengg/SE347-HotelManagement.git',
-        },
-        {
-            title: 'Last Mile Delivery',
-            description: 'An effective last-mile delivery solution that helps optimize delivery routes and manage delivery staff. Includes delivery status updates, route display, and order status tracking. The app helps streamline the delivery process and improve customer satisfaction.',
-            technologies: ['ReactJS', 'Node.js', 'MongoDB', 'Express', 'Tailwind CSS', 'Here Maps API'],
-            github: 'https://github.com/Shiengg/SE121_Last_mile_delivery.git',
         },
         {
             title: 'GoodGadget',

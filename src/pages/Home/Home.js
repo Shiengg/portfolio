@@ -1,12 +1,14 @@
 import './Home.css';
 import { useState, useEffect } from 'react';
-import { FaFacebookF, FaInstagram, FaBehance, FaGithub, FaLinkedinIn } from 'react-icons/fa';
+import { FaGithub, FaLinkedinIn } from 'react-icons/fa';
 import { HiDocumentText } from 'react-icons/hi';
 
 const Home = () => {
     const [text, setText] = useState('');
     const [isDeleting, setIsDeleting] = useState(false);
-    const fullText = 'Developer';
+    const [textIndex, setTextIndex] = useState(0);
+    const texts = ['Developer', 'Software Engineer', 'Web Developer'];
+    const currentText = texts[textIndex];
     const typingSpeed = 150;
     const deletingSpeed = 100;
     const delayTime = 2000; // Delay before deleting starts
@@ -14,24 +16,25 @@ const Home = () => {
     useEffect(() => {
         let timeout;
 
-        if (!isDeleting && text !== fullText) {
+        if (!isDeleting && text !== currentText) {
             timeout = setTimeout(() => {
-                setText(fullText.slice(0, text.length + 1));
+                setText(currentText.slice(0, text.length + 1));
             }, typingSpeed);
         } else if (isDeleting && text !== '') {
             timeout = setTimeout(() => {
-                setText(fullText.slice(0, text.length - 1));
+                setText(currentText.slice(0, text.length - 1));
             }, deletingSpeed);
-        } else if (!isDeleting && text === fullText) {
+        } else if (!isDeleting && text === currentText) {
             timeout = setTimeout(() => {
                 setIsDeleting(true);
             }, delayTime);
         } else if (isDeleting && text === '') {
             setIsDeleting(false);
+            setTextIndex((prevIndex) => (prevIndex + 1) % texts.length);
         }
 
         return () => clearTimeout(timeout);
-    }, [text, isDeleting]);
+    }, [text, isDeleting, currentText, texts.length]);
 
     return (
         <section id="home" className="home">
