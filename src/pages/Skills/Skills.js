@@ -1,6 +1,6 @@
 import './Skills.css';
 import { FaReact, FaHtml5, FaCss3Alt, FaJs, FaNodeJs, FaBootstrap, FaGitAlt, FaFigma } from 'react-icons/fa';
-import { SiMongodb, SiMysql, SiRedux, SiPostman, SiFirebase } from 'react-icons/si';
+import { SiMongodb, SiPostman, SiFirebase, SiElastic, SiGrafana } from 'react-icons/si';
 
 const Skills = () => {
     const skills = [
@@ -14,6 +14,8 @@ const Skills = () => {
         { name: 'MongoDB', icon: <SiMongodb />, color: '#47A248' },
         { name: 'Firebase', icon: <SiFirebase />, color: '#FFCA28' },
         { name: 'RESTful API', icon: <SiPostman />, color: '#FF6C37' },
+        { name: 'ELK Stack', icon: <SiElastic />, color: '#005571' },
+        { name: 'Prometheus & Grafana', icon: <SiGrafana />, color: '#F46800' },
         { name: 'Git', icon: <FaGitAlt />, color: '#F05032' },
         { name: 'Figma', icon: <FaFigma />, color: '#F24E1E' }
     ];

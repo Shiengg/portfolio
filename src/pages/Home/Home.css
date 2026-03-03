@@ -58,30 +58,40 @@
 
 .social-links {
     display: flex;
+    flex-wrap: wrap;
     gap: 1rem;
 }
 
 .social-link {
-    display: flex;
+    display: inline-flex;
     align-items: center;
+    justify-content: center;
     gap: 0.5rem;
-    padding: 0.8rem 1.5rem;
-    border-radius: 25px;
-    background: white;
-    color: #45505b;
+    padding: 1rem 2.5rem;
+    border-radius: 9999px;
+    background: #fff;
+    color: #000;
     text-decoration: none;
-    transition: all 0.3s ease;
     font-family: "Be Vietnam Pro", sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+    box-shadow: 4px 4px 0 0 #000;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.social-link--resume {
+    background: #EBD22F;
+    color: #000;
 }
 
 .social-link svg {
-    font-size: 20px;
+    font-size: 1.1em;
 }
 
 .social-link:hover {
-    color: #0066ff;
-    background-color: rgba(0, 102, 255, 0.1);
-    transform: translateY(-2px);
+    transform: translate(2px, 2px);
+    box-shadow: 2px 2px 0 0 #000;
 }
 
 .typing-text {
@@ -134,8 +144,8 @@
     }
 
     .social-link {
-        padding: 0.7rem 1.2rem;
-        font-size: 0.9rem;
+        padding: 0.65rem 1.25rem;
+        font-size: 0.85rem;
     }
 }
 
@@ -154,6 +164,6 @@
 
     .social-link {
         padding: 0.6rem 1rem;
-        font-size: 0.85rem;
+        font-size: 0.8rem;
     }
 }

@@ -1,7 +1,5 @@
 import './Home.css';
 import { useState, useEffect } from 'react';
-import { FaGithub, FaLinkedinIn } from 'react-icons/fa';
-import { HiDocumentText } from 'react-icons/hi';
 
 const Home = () => {
     const [text, setText] = useState('');
@@ -43,28 +41,18 @@ const Home = () => {
                 <p>I'm <span className="typing-text">{text}</span></p>
                 <div className="social-links">
                     <a
-                        href="https://github.com/Shiengg"
-                        className="social-link"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        <FaGithub />Github
-                    </a>
-                    <a
-                        href="https://www.linkedin.com/in/tann-tn/"
-                        className="social-link"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        <FaLinkedinIn />LinkedIn
-                    </a>
-                    <a
                         href="mailto:nhattanwork2004@gmail.com"
                         className="social-link"
+                    >
+                        Get in Touch
+                    </a>
+                    <a
+                        href="https://drive.google.com/file/d/19O-L7TNm8KRVYd6TGrzm3VHrW2SdnYnz/view?usp=sharing"
+                        className="social-link social-link--resume"
                         target="_blank"
                         rel="noopener noreferrer"
                     >
-                        <HiDocumentText />Email
+                        View Resume
                     </a>
                 </div>
             </div>

@@ -26,63 +26,77 @@
 }
 
 .contact-container {
-    max-width: 800px;
+    max-width: 980px;
     margin: 60px auto 0;
     padding: 0 20px;
 }
 
 .contact-links {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 600px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+    gap: 18px;
+    max-width: 900px;
     margin: 0 auto;
+    padding: 12px;
+    border: 4px solid #EBD22F;
+    background: transparent;
 }
 
 .contact-link {
-    display: flex;
-    flex-direction: column;
+    display: inline-flex;
     align-items: center;
-    gap: 0.8rem;
-    color: #45505b;
+    justify-content: center;
+    color: #000;
     text-decoration: none;
-    transition: all 0.3s ease;
-    width: 100px;
+    transition: background-color 0.15s ease, color 0.15s ease, transform 0.15s ease;
+    flex: 1 1 220px;
+    min-height: 84px;
     text-align: center;
+    padding: 18px 28px;
+    background: #fff;
+    border: 6px solid #000;
+    border-radius: 0;
+    box-sizing: border-box;
 }
 
-.contact-link svg {
-    font-size: 2.2rem;
-    transition: all 0.3s ease;
+.contact-link--wide {
+    flex-basis: 100%;
 }
 
-.contact-link span {
-    font-size: 0.95rem;
-    font-family: "Be Vietnam Pro", sans-serif;
-    font-weight: 500;
+.contact-link__label {
+    font-size: 1.4rem;
+    font-family: "Raleway", sans-serif;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    line-height: 1;
 }
 
 .contact-link:hover {
-    color: #0066ff;
-    transform: translateY(-5px);
+    background: #000;
+    color: #fff;
+    transform: translateY(-2px);
+}
+
+.contact-link:focus-visible {
+    outline: 3px solid #0066ff;
+    outline-offset: 4px;
 }
 
 @media (max-width: 576px) {
     .contact-links {
-        gap: 1.5rem;
-        flex-wrap: wrap;
-        justify-content: center;
+        gap: 12px;
+        padding: 10px;
     }
 
     .contact-link {
-        width: 80px;
+        flex-basis: 100%;
+        min-height: 72px;
     }
 
-    .contact-link svg {
-        font-size: 2rem;
-    }
-
-    .contact-link span {
-        font-size: 0.9rem;
+    .contact-link__label {
+        font-size: 1.1rem;
     }
 }

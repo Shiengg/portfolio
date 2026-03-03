@@ -22,7 +22,8 @@ const Contact = () => {
             icon: <FaCalendarAlt />,
             title: 'Schedule a Call',
             link: '#',
-            onClick: handleScheduleCall
+            onClick: handleScheduleCall,
+            variant: 'wide'
         },
         {
             icon: <FaGithub />,
@@ -52,11 +53,10 @@ const Contact = () => {
                             href={method.link}
                             onClick={method.onClick}
                             target={method.onClick ? undefined : "_blank"}
-                            rel="noopener noreferrer"
-                            className="contact-link"
+                            rel={method.onClick ? undefined : "noopener noreferrer"}
+                            className={`contact-link${method.variant === 'wide' ? ' contact-link--wide' : ''}`}
                         >
-                            {method.icon}
-                            <span>{method.title}</span>
+                            <span className="contact-link__label">{method.title}</span>
                         </a>
                     ))}
                 </div>

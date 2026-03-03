@@ -1,51 +1,46 @@
 import './About.css';
-import { FaUserGraduate, FaCode, FaMapMarkerAlt, FaEnvelope } from 'react-icons/fa';
 
 const About = () => {
+    const tags = [
+        'Software Engineer',
+        'Web Development',
+    ];
+
     return (
         <section id="about" className="about">
             <div className="about-container">
-                <h2 className="about-title">About.</h2>
-                <div className="about-content">
-                    <p>
-                        My name is Nhat Tan, a third-year Information Technology student at the University of Information Technology, Ho Chi Minh City.
-                        Passionate about technology.
-                        I am constantly exploring new innovations in the field.
-                        I have achieved a GPA of 8.25/10 while gaining hands-on experience in collaborating with teams and managing complex projects.
-                    </p>
-
-                    <div className="about-info">
-                        <div className="info-column">
-                            <div className="info-item">
-                                <FaUserGraduate className="info-icon" />
-                                <div className="info-text">
-                                    <h4>Education</h4>
-                                    <p>University of Information Technology</p>
-                                </div>
-                            </div>
-                            <div className="info-item">
-                                <FaCode className="info-icon" />
-                                <div className="info-text">
-                                    <h4>Specialization</h4>
-                                    <p>Web Development</p>
-                                </div>
+                <div className="about-layout">
+                    <div className="about-visual" aria-hidden="true">
+                        <div className="about-card">
+                            <div className="about-card__pin about-card__pin--tl" />
+                            <div className="about-card__pin about-card__pin--tr" />
+                            <div className="about-card__pin about-card__pin--bl" />
+                            <div className="about-card__pin about-card__pin--br" />
+                            <div className="about-card__inner">
+                                <div className="about-avatar" aria-hidden="true">🧑🏻‍💻</div>
                             </div>
                         </div>
-                        <div className="info-column">
-                            <div className="info-item">
-                                <FaMapMarkerAlt className="info-icon" />
-                                <div className="info-text">
-                                    <h4>Location</h4>
-                                    <p>Ho Chi Minh City, Vietnam</p>
-                                </div>
-                            </div>
-                            <div className="info-item">
-                                <FaEnvelope className="info-icon" />
-                                <div className="info-text">
-                                    <h4>Email</h4>
-                                    <p>nhattanwork2004@gmail.com</p>
-                                </div>
-                            </div>
+                        <div className="about-dot about-dot--pink" />
+                        <div className="about-dot about-dot--yellow" />
+                        <div className="about-dot about-dot--green" />
+                        <div className="about-dot about-dot--blue" />
+                    </div>
+
+                    <div className="about-copy">
+                        <h2 className="about-heading">
+                            ABOUT <span>ME</span>
+                        </h2>
+
+                        <p className="about-description">
+                            Software Engineer skilled in JavaScript with experience in system design, backend development, CI/CD pipelines, and real-time data systems using Docker, RabbitMQ, and Prometheus. Passionate about learning new technologies and collaborating to deliver scalable end-to-end solutions.
+                        </p>
+
+                        <div className="about-tags">
+                            {tags.map((tag) => (
+                                <span className="about-tag" key={tag}>
+                                    {tag}
+                                </span>
+                            ))}
                         </div>
                     </div>
                 </div>
